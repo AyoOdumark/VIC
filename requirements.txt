@@ -1,0 +1,5 @@
+fastapi[all]
+whisper
+llama-cpp-python
+redis-om
+redis
