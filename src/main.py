@@ -13,7 +13,11 @@ def chat_completion(text: str):
 
 @app.post("/transcribe")
 def transcribe(file: UploadFile):
-    transcription = stt.transcribe_audio(file.file)
+    print(file)
+    # content = await file.read()
+    # print(content)
+    audio_data = file.file.read()
+    transcription = stt.transcribe_audio(audio_data)
     return transcription
 
 
